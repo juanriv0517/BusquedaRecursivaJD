@@ -22,7 +22,7 @@ public class JBusquedaRecursiva extends javax.swing.JFrame {
     }
     
     private void abrirVentanaHija(JInternalFrame nuevaVentana) {
-        // Si hay una ventana abierta y activa, la cierra antes de abrir la nueva
+
         if (ventanaActiva != null && !ventanaActiva.isClosed()) {
             ventanaActiva.dispose();
         }

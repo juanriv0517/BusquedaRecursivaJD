@@ -220,12 +220,10 @@ public class VentanaHija extends javax.swing.JInternalFrame {
             ArrayList<Integer> coincidencias = new ArrayList<>();
             int valor = 0;
 
-            // Leer dato a buscar solo si el método lo requiere
             if (modoActual != ModoBusqueda.MINIMO && modoActual != ModoBusqueda.MAXIMO) {
                 valor = Integer.parseInt(txtDatoBuscar.getText().trim());
             }
 
-            // Según el modo, ejecutamos el método del Back correspondiente
             switch (modoActual) {
                 case SECUENCIAL -> {
                     boolean encontrado = BusquedaRecursiva.secuencial(vectorActual, 0, valor);

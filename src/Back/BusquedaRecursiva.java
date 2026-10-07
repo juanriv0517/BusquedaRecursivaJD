@@ -36,7 +36,7 @@ public class BusquedaRecursiva {
             System.out.println("["+ i +"] ->"+vector[i]);
         }
     }
-
+    
     public int[] getVector() {
         return vector;
     }
@@ -112,23 +112,22 @@ public class BusquedaRecursiva {
 
         return binariaLimites(vector, medio + 1, fin, valor);
     }
-
+    
+    //todasLasOcurrencias
     public ArrayList<Integer> todasLasOcurrencias(int[] vector, int indice, int valor, ArrayList<Integer> posiciones) {
-    // Caso base: si llegamos al final del vector, retornamos la lista acumulada
+
     if (indice == vector.length) {
         return posiciones;
     }
 
-    // Si encontramos el valor, añadimos el índice actual a la lista
     if (vector[indice] == valor) {
         posiciones.add(indice);
     }
 
-    // Llamada recursiva para evaluar el siguiente índice
     return todasLasOcurrencias(vector, indice + 1, valor, posiciones);
 }
     
-    // 6. Búsqueda recursiva del mínimo - Complejidad O(n)
+    //  Búsqueda recursiva del mínimo
     public int buscarMinimo(int[] vector, int indice) {
         if (indice == vector.length - 1) {
             return vector[indice];
@@ -137,7 +136,7 @@ public class BusquedaRecursiva {
         
         return Math.min(vector[indice], minResto);
     }
-    // 7. Búsqueda recursiva del máximo - Complejidad O(n)
+    //  Búsqueda recursiva del máximo
     public int buscarMaximo(int[] vector, int indice) {
         if (indice == vector.length - 1) {
             return vector[indice];
@@ -147,7 +146,7 @@ public class BusquedaRecursiva {
         
         return Math.max(vector[indice], maxResto);
     }
-    // 8. Búsqueda recursiva de posición (Última Posición) - Complejidad O(n)
+    //  Búsqueda recursiva de posición Última Posición
      public int buscarUltimaPosicion(int[] vector, int indice, int valor) {
         if (indice < 0) {
             return -1;
